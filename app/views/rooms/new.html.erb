@@ -1,2 +1,14 @@
-<h1>Rooms#new</h1>
-<p>Find me in app/views/rooms/new.html.erb</p>
+<% if @room.errors.any? %>
+     <%= pluralize(@room.errors.count, 'error') %> need your attention.
+     <ul class="mdl-list">
+       <% @room.errors.full_messages.each do |msg| %>
+         <li class="mdl-list__item"><%= msg %></li>
+       <% end %>
+     </ul>
+   <% end %>
+
+<%= form_for @room do |f| %>
+<%= f.label :room_name %>
+<%= f.text_field :room_name %>
+<%= f.submit %>
+<%end %>

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  validates :username, :password, presence: true
+  validates :user_name, :password, presence: true
   attachment :photo
 
 end

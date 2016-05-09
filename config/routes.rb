@@ -1,17 +1,25 @@
 Rails.application.routes.draw do
-  get 'rooms/index'
 
-  get 'rooms/new'
+  namespace :api do
+      get 'posts' => 'posts#index'
+      post 'posts' => 'posts#create'
+      get 'rooms/:id' => 'rooms#show'
+      post 'rooms' => 'rooms#create'
+    end
 
-  get 'rooms/show'
+  root 'welcome#index'
 
-  get 'welcome/index'
+  get 'signin' => 'sessions#new', as: :signin
+  post 'signin' => 'sessions#create'
+  get 'signout' => 'sessions#delete', as: :signout
+  get 'users/new' => 'users#new', as: :register
+  post 'users' => 'users#create', as: :users
+  get 'users/:id' => 'users#show', as: :user
 
-  get 'sessions/new'
-
-  get 'sessions/delete'
-
-  get 'users/new'
+  get 'rooms/index' => 'rooms#index', as: :rooms
+  get 'rooms/new' => 'rooms#new', as: :new_room
+  get 'rooms/:id' => 'rooms#show', as: :room
+  post 'rooms/index' => 'rooms#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

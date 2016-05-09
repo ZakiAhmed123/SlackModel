@@ -1,2 +1,17 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<% if @user.errors.any? %>
+      <%= pluralize(@user.errors.count, 'error') %> need your attention.
+      <ul class="mdl-list">
+        <% @user.errors.full_messages.each do |msg| %>
+          <li class="mdl-list__item"><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+<%= form_for @user do |f| %>
+<%= f.text_field :first_name, placeholder:"First Name" %>
+<%= f.text_field :last_name, placeholder:"Last Name" %>
+<%= f.text_field :user_name, placeholder:"User Name" %>
+<%= f.text_field :email, placeholder:"Email" %>
+<%= f.password_field :password, placeholder:"Password" %>
+<%= f.attachment_field :photo%>
+<%= f.submit %>
+<%end%>
