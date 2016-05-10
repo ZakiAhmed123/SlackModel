@@ -1,7 +1,38 @@
-<%= form_tag do %>
-<%= label_tag :email %>
-<%= text_field_tag :email%>
-<%= label_tag :password %>
-<%= password_field_tag :password %>
-<%= submit_tag %>
-<%end %>
+<div class="welcome-container">
+
+  <div class="logo-container">
+    <i class="fa fa-slack fa-2x" aria-hidden="true"></i>
+    <span class="logo">
+      slack
+    </span>
+  </div>
+
+  <div class="content-container">
+
+      <div class="element">
+      </div>
+
+      <div class="signinform">
+          <%= form_tag do %>
+          <div class="field-container">
+          <%= text_field_tag(:email,nil, class:'emailfield',placeholder: 'Email Address')%>
+          <%= password_field_tag :password,nil, class:'passwordfield', placeholder: 'Password'%>
+        </div>
+          <%= submit_tag "Welcome Back", class:'signinsubmit' %>
+        <%end %>
+        <p class="signupline">
+          New to Slack?
+          <%= link_to "Sign Up", register_path, class:"signuplink" %>
+        </p>
+      </div>
+
+  </div>
+
+</div>
+
+<script src="typed.js"></script>
+<script>
+  $(function () {
+    $(".element").typed({strings: ["A messaging app for teams who see through to Mars..."], typeSpeed: 0});
+  });
+</script>

@@ -7,9 +7,7 @@ Rails.application.routes.draw do
       post 'rooms' => 'rooms#create'
     end
 
-  root 'welcome#index'
-
-  get 'signin' => 'sessions#new', as: :signin
+  root 'sessions#new'
   post 'signin' => 'sessions#create'
   get 'signout' => 'sessions#delete', as: :signout
   get 'users/new' => 'users#new', as: :register
