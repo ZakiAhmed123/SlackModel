@@ -48,8 +48,6 @@ body {
 
 // SIGNIN FORM
 .signinform {
-  top:65%;
-  left:27%;
   width:50%;
   height:80%;
   background-color: rgba(236, 240, 241, 0.6);
@@ -78,7 +76,8 @@ font-weight: lighter;
 border-radius:5px;
 border:2px solid white;
 margin-right:10px;
-margin-bottom:10px
+margin-bottom:10px;
+margin-left: 5px;
 }
 
 .passwordfield {
@@ -88,7 +87,8 @@ color:rgba(189, 195, 199, 1.0);
 font-weight: lighter;
 border-radius:5px;
 border:2px solid white;
-margin-bottom:10px
+margin-bottom:10px;
+margin-left: 5px;
 
 }
 
@@ -99,8 +99,10 @@ margin-bottom:10px
   border-radius: 5px;
   color:white;
   border:2px solid rgba(46, 204, 113, 1.0);
-  width:99%;
+  width:98.5%;
   height:50px;
+  margin-left: 5px;
+
 }
 
 .signinsubmit:hover {
@@ -116,7 +118,7 @@ margin:0px;
 }
 
 .signuplink:hover {
-  color:rgba(46, 204, 113, 1.0);
+  color:rgba(44, 62, 80, 1.0);
 }
 
 .signuplink {

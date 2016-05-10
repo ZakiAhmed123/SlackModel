@@ -1,17 +1,30 @@
+<div class="welcome-container">
+
+  <div class="logo-container">
+    <i class="fa fa-slack fa-2x" aria-hidden="true"></i>
+    <span class="logo">
+      slack
+    </span>
+  </div>
+<div class="content-container">
+<div class="signinform">
 <% if @user.errors.any? %>
       <%= pluralize(@user.errors.count, 'error') %> need your attention.
-      <ul class="mdl-list">
+      <ul>
         <% @user.errors.full_messages.each do |msg| %>
-          <li class="mdl-list__item"><%= msg %></li>
+          <li><%= msg %></li>
         <% end %>
       </ul>
     <% end %>
 <%= form_for @user do |f| %>
-<%= f.text_field :first_name, placeholder:"First Name" %>
-<%= f.text_field :last_name, placeholder:"Last Name" %>
-<%= f.text_field :user_name, placeholder:"User Name" %>
-<%= f.text_field :email, placeholder:"Email" %>
-<%= f.password_field :password, placeholder:"Password" %>
-<%= f.attachment_field :photo%>
-<%= f.submit %>
+<%= f.text_field :first_name, placeholder:"First Name", class:"signupfield" %>
+<%= f.text_field :last_name, placeholder:"Last Name", class:"signupfield" %>
+<%= f.text_field :user_name, placeholder:"User Name", class:"signupfield" %>
+<%= f.text_field :email, placeholder:"Email", class:"signupfield" %>
+<%= f.password_field :password, placeholder:"Password", class:"signupfield" %>
+<%= f.attachment_field :photo, class:'browse'%>
+<%= f.submit "Sign Up", class:"signinsubmit" %>
 <%end%>
+</div>
+</div>
+</div>
