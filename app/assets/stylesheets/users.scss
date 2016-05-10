@@ -9,7 +9,7 @@ body {
   height:100vh;
   background-repeat: no-repeat;
 }
-.logo-container {
+.logo-container2 {
   color:white;
   margin-left: 10px;
 }
@@ -29,5 +29,46 @@ color:rgba(189, 195, 199, 1.0);
 font-weight: lighter;
 border-radius:5px;
 border:2px solid white;
+}
+
+.signupform {
+
+  width:50%;
+  height:80%;
+  background-color: rgba(236, 240, 241, 0.6);
+  border-radius: 10px;
+  line-height: 60px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.browse {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  border-radius: 5px;
+  background-color: white;
+  height:30px;
+  color:rgba(189, 195, 199, 1.0);
+
+}
+@media only screen and (max-width: 415px) {
+
+   .signupform {
+     width:100vw;
+     height:80vh;
+   }
+   .signupfield {
+     width:95%;
+   }
+   .signinsubmit {
+     font-size: 22px;
+   }
+   .logo-container2 {
+     margin-bottom: 100px;
+   }
 
 }

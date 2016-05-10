@@ -1,13 +1,13 @@
 <div class="welcome-container">
 
-  <div class="logo-container">
+  <div class="logo-container2">
     <i class="fa fa-slack fa-2x" aria-hidden="true"></i>
     <span class="logo">
       slack
     </span>
   </div>
 <div class="content-container">
-<div class="signinform">
+<div class="signupform">
 <% if @user.errors.any? %>
       <%= pluralize(@user.errors.count, 'error') %> need your attention.
       <ul>
@@ -16,6 +16,7 @@
         <% end %>
       </ul>
     <% end %>
+    <center>
 <%= form_for @user do |f| %>
 <%= f.text_field :first_name, placeholder:"First Name", class:"signupfield" %>
 <%= f.text_field :last_name, placeholder:"Last Name", class:"signupfield" %>
@@ -25,6 +26,11 @@
 <%= f.attachment_field :photo, class:'browse'%>
 <%= f.submit "Sign Up", class:"signinsubmit" %>
 <%end%>
+<p class="signupline">
+  Already have an account?
+  <%= link_to "Sign In", root_path, class:"signuplink" %>
+</p>
+</center>
 </div>
 </div>
 </div>
