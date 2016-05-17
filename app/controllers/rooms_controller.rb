@@ -10,11 +10,15 @@ class RoomsController < ApplicationController
 
    def index
      @rooms = Room.all
+     @room = Room.new
    end
 
    def show
      @room = Room.find_by id: params[:id]
+     @rooms = Room.all
+
    end
+
 
    def new
      @room = Room.new

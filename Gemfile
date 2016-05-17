@@ -48,7 +48,7 @@ group :development do
   gem 'spring'
 end
 
-gem 'react-rails', '~> 1.0'
+gem 'react-rails'
 gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 gem 'refile-postgres'

@@ -8,14 +8,13 @@ Rails.application.routes.draw do
     end
 
   root 'sessions#new'
-  post 'signin' => 'sessions#create'
+  post '/' => 'sessions#create'
   get 'signout' => 'sessions#delete', as: :signout
   get 'users/new' => 'users#new', as: :register
   post 'users' => 'users#create', as: :users
   get 'users/:id' => 'users#show', as: :user
 
   get 'rooms/index' => 'rooms#index', as: :rooms
-  get 'rooms/new' => 'rooms#new', as: :new_room
   get 'rooms/:id' => 'rooms#show', as: :room
   post 'rooms/index' => 'rooms#create'
 

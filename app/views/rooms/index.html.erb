@@ -1,13 +1,36 @@
-<%= link_to "Sign Out", signout_path %>
-<h1><%= @rooms.length %> active rooms</h1>
+<div class="sidebar-container">
 
-<div class="room_icon">
-  <% if @current_user %>
-      <%= link_to "Create Room", new_room_path, class: "button" %>
-    <% else %>
-  <% end %>
-</div>
+<p class="side-container">
+  <span><i class="fa fa-slack fa-2x" aria-hidden="true"></i>
+  <span class="logo">
+    slack
+  </span></span>
+<%= link_to signout_path do %><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i><%end %>
+
+</p>
+<%= @current_user.first_name %> <%= @current_user.last_name %>
+
+<p class="channels">
+  <p>CHANNELS (<%= @rooms.length %>)</p>
+
+  <div class="click">
+    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+  </div>
+</p>
+  <div class="showup">
+    <%= form_for @room do |f| %>
+    <%= f.label :room_name %>
+    <%= f.text_field :room_name, class:"newroom" %>
+    <%= f.submit "Add Room", class:"addroombutton" %>
+    <%end %>
+  </div>
+
+
+
 
 <% @rooms.each do |room| %>
-  <h1><%= link_to room.room_name, room_path(id: room.id) %></h1>
+  <p class="room-name">#<%= link_to room.room_name, room_path(id: room.id), class:"rooms-list" %></p>
 <% end %>
+
+
+</div>

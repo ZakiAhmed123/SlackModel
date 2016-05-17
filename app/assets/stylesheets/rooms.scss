@@ -1,3 +1,91 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.click {
+  cursor:pointer;
+}
+
+
+.showup {
+  display:flex;
+  flex-direction: column;
+}
+
+.sidebar-container {
+  width:15%;
+  height:100vh;
+  background-color: #4D394C;
+  color:#BDC3C7;
+  font-family: 'Lato', sans-serif;
+  padding-left: 5px;
+  padding-top: 10px;
+}
+
+.sidebar-container i {
+  color:white;
+}
+
+.rooms-list {
+  color:#BDC3C7;
+  text-decoration: none;
+  width:100%;
+}
+
+.room-name {
+  width:95%;
+  border-radius: 10px;
+  margin:5px 0 0px 0;
+}
+
+.room-name:hover {
+  background-color: #300F42;
+}
+
+.channels {
+  display:inline-block;
+}
+
+.newroom {
+  border-radius: 5px;
+  border:1px solid #3498DB;
+  color:#95A5A6;
+}
+
+
+.side-container {
+  color:white;
+  display:flex;
+  justify-content: space-between;
+  margin:0px;
+  width:100%;
+  border-radius: 10px;
+}
+
+.side-container:hover {
+  background-color: #300F42;
+
+}
+
+.addroombutton {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  width:65%;
+}
+
+.addroombutton:hover {
+  background-color: #4D394C;
+  color:white;
+}
+
+.room_container {
+  display:flex;
+}
+
+.room_title {
+  position: fixed;
+  top: 0;
+  left: 15.5%;
+  z-index: 9999;
+  width: 84.5%;
+  height: 50px;
+  background-color: white;
+  border-bottom: 1px solid gray;
+}
