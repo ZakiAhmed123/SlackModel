@@ -5,4 +5,8 @@ class Post < ActiveRecord::Base
 
   validates :text, presence: true
 
+  def timestamp
+    created_at.strftime '%l:%M %p'
+  end
+
 end

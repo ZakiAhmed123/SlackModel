@@ -4,6 +4,7 @@ json.room do
   json.posts @room.posts do |post|
     json.id post.id
     json.text post.text
+    json.room_id post.room_id
       json.user do
         json.id post.user.id
         json.username post.user.user_name

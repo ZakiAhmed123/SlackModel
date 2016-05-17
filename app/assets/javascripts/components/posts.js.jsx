@@ -32,25 +32,11 @@ var Posts = React.createClass({
     clearInterval(this.fetchPostsTimer);
   },
 
-  prevPage(e){
-    e.preventDefault()
-    this.setState({page: this.state.page-1})
-  },
-
-  nextPage(e){
-    e.preventDefault()
-    this.setState({page: this.state.page+1})
-  },
-
-
 
   render: function() {
     var page = this.state.page,
         size = this.state.pageSize,
-        posts = this.state.posts,
-        prevLink = <a href="#" onClick={this.prevPage}>prev</a>,
-        nextLink = <a href="#" onClick={this.nextPage}>next</a>,
-        maxPage = Math.ceil(posts.length / size) - 1
+        posts = this.state.posts
 
     var divstyle = {
     margin: '50px 0px 0px 30px',
@@ -63,14 +49,10 @@ var Posts = React.createClass({
 
     return <div style={divstyle}>
       {posts.slice(page*size, (page+1)*size).map(function(post){
-        return <p style={namestyle} key={post.id}>{post.user.first_name} {post.text}</p>
+        return <p style={namestyle} key={post.id}> {post.timestamp} {post.user.first_name} {post.user.last_name} said: {post.text}
+        </p>
       })}
 
-      <div>
-        {page !==0 ? prevLink : ''}
-
-        {page === maxPage ? '' : nextLink}
-      </div>
 
     </div>;
   }
