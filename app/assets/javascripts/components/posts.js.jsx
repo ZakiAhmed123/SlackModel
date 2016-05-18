@@ -49,7 +49,7 @@ var Posts = React.createClass({
 
     return <div style={divstyle}>
       {posts.slice(page*size, (page+1)*size).map(function(post){
-        return <p style={namestyle} key={post.id}> {post.timestamp} {post.user.first_name} {post.user.last_name} said: {post.text}
+        return <p style={namestyle} key={post.id}> <img src={post.user.user_photo_url}/> {post.timestamp} {post.user.first_name} {post.user.last_name} said: {post.text}
         </p>
       })}
 

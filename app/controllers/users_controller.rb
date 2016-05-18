@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new params.require(:user).permit(:user_name, :password, :photo, :first_name, :last_name, :email)
-   if @user.save
+    if @user.save
+   @user.save
      session[:user_id] = @user.id
      redirect_to rooms_path
    else
