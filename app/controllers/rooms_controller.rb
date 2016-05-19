@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
       room= Room.find_by(id: params[:id])
 
      if @room.save
-       redirect_to room_path(id: room.id)
+       redirect_to room_path(id: @room.id)
      else
        flash.now[:alert] = "Add a Room Name Please"
        render :new

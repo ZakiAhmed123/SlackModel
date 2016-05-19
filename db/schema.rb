@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518073313) do
+ActiveRecord::Schema.define(version: 20160519172702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,10 +25,13 @@ ActiveRecord::Schema.define(version: 20160518073313) do
   end
 
   create_table "refile_attachments", force: :cascade do |t|
-    t.string "namespace", null: false
+    t.integer  "oid",        null: false
+    t.string   "namespace",  null: false
+    t.datetime "created_at"
   end
 
   add_index "refile_attachments", ["namespace"], name: "index_refile_attachments_on_namespace", using: :btree
+  add_index "refile_attachments", ["oid"], name: "index_refile_attachments_on_oid", using: :btree
 
   create_table "rooms", force: :cascade do |t|
     t.string   "room_name"
