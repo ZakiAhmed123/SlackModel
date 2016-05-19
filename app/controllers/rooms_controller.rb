@@ -26,13 +26,12 @@ class RoomsController < ApplicationController
 
    def create
      @room = Room.new params.require(:room).permit(:room_name)
-      room= Room.find_by(id: params[:id])
 
      if @room.save
        redirect_to room_path(id: @room.id)
      else
-       flash.now[:alert] = "Add a Room Name Please"
        render :new
+       flash.now[:alert] = "Add a Room Name Please"
      end
    end
 
