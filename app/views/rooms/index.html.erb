@@ -1,36 +1,28 @@
-<div class="sidebar-container">
 
-<p class="side-container">
-  <span><i class="fa fa-slack fa-2x" aria-hidden="true"></i>
-  <span class="logo">
-    slack
-  </span></span>
-<%= link_to signout_path do %><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i><%end %>
 
-</p>
-<%= @current_user.first_name %> <%= @current_user.last_name %>
-
-<p class="channels">
-  <p>CHANNELS (<%= @rooms.length %>)</p>
-
-  <div class="click">
-    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-  </div>
-</p>
-  <div class="showup">
+<div class="welcome-content">
+  <div class="add-rooms">
+    <span class="logospan">
+<%=image_tag 'logo.png', class:'slacklogo' %>
+      <span class="logo">
+        slack
+      </span>
+    </span>
+    <div class="add-room-question">
+      <p> Hey <%=@current_user.first_name %>!
+      <p>What do you want to</p>
+      <p>call your Slack Team?</p>
+    </div>
+    <div class="suggestion">
+      <p><center>Name your team after the group </center> </p>
+      <p><center>that will be using Slack togethor.<center></p>
+    </div>
+  <center style="padding-top:20px;">
     <%= form_for @room do |f| %>
-    <%= f.label :room_name %>
-    <%= f.text_field :room_name, class:"newroom" %>
-    <%= f.submit "Add Room", class:"addroombutton" %>
+    <%= f.text_field :room_name, class:"newroom", placeholder:'Ex. Thermo Study Group' %>
+    <%= f.submit 'Go', class:'new-room-submit' %>
     <%end %>
+</center>
   </div>
-
-
-
-
-<% @rooms.each do |room| %>
-  <p class="room-name">#<%= link_to room.room_name, room_path(id: room.id), class:"rooms-list" %></p>
-<% end %>
-
-
+  <%= image_tag 'art.png', class:'art'%>
 </div>

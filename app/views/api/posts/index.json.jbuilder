@@ -12,6 +12,7 @@ json.posts @posts do |post|
     json.first_name post.user.first_name
     json.last_name post.user.last_name
     json.email post.user.email
+    json.username post.user.user_name
     json.user_photo_url attachment_url(post.user, :photo, :fill, 70, 70, format: "jpg")
   end
 end

@@ -39,7 +39,7 @@ var Posts = React.createClass({
         posts = this.state.posts
 
     var divstyle = {
-    margin: '50px 0px 0px 30px',
+    margin: '50px 0px 0px 0px',
     }
 
     var namestyle = {
@@ -49,7 +49,13 @@ var Posts = React.createClass({
 
     return <div style={divstyle}>
       {posts.slice(page*size, (page+1)*size).map(function(post){
-        return <p style={namestyle} key={post.id}> <img src={post.user.user_photo_url}/> {post.timestamp} {post.user.first_name} {post.user.last_name} said: {post.text}
+        return <p style={namestyle} className='lines' key={post.id}> <img src={post.user.user_photo_url}/>
+        <span className='name'>
+          {post.user.first_name}
+          {post.user.last_name}</span>
+        <span className='timestamp'>
+          {post.timestamp}</span>
+         <p>{post.text}</p>
         </p>
       })}
 

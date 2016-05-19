@@ -12,7 +12,7 @@
   width:15%;
   height:100vh;
   background-color: #4D394C;
-  color:#BDC3C7;
+  color:#A797A4;
   font-family: 'Lato', sans-serif;
   padding-left: 5px;
   padding-top: 10px;
@@ -23,19 +23,20 @@
 }
 
 .rooms-list {
-  color:#BDC3C7;
+  color:#A797A4;
   text-decoration: none;
   width:100%;
 }
 
 .room-name {
   width:95%;
-  border-radius: 10px;
+  border-radius: 5px;
   margin:5px 0 0px 0;
 }
 
 .room-name:hover {
-  background-color: #300F42;
+  background-color: #4C9689;
+  color:white;
 }
 
 .channels {
@@ -44,8 +45,16 @@
 
 .newroom {
   border-radius: 5px;
-  border:1px solid #3498DB;
-  color:#95A5A6;
+  border:1px solid #9E9EA6;
+  color:#9E9EA6;
+  height:50px;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  width:80%;
+}
+
+.newroom:hover {
+  border:1px solid #3498db;
 }
 
 
@@ -55,11 +64,11 @@
   justify-content: space-between;
   margin:0px;
   width:100%;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .side-container:hover {
-  background-color: #300F42;
+  background-color: #4C9689;
 
 }
 
@@ -82,13 +91,110 @@
 .room_title {
   position: fixed;
   top: 0;
-  left: 15.5%;
+  left: 14%;
   z-index: 9999;
-  width: 84.5%;
   height: 50px;
+  width: 100%;
   background-color: white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #bdc3c7;
   font-family: 'Lato';
   font-weight: bold;
-  font-size: 35px;
+  font-size: 25px;
+  padding-left: 20px;
+}
+
+
+.logo {
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+}
+.lines {
+  margin:0px;
+  height:100%;
+  width:85vw;
+}
+
+.lines:hover {
+  background-color: #EFF0F1;
+}
+
+.name {
+  font-weight: bold;
+}
+.timestamp{
+  color:#95a5a6;
+  font-size: 12px;
+}
+
+
+.welcome-room-container {
+  display:flex;
+
+}
+
+.art {
+  width:60%;
+  height:100vh;
+}
+
+.welcome-content{
+  display:flex;
+  width:100%;
+}
+
+.add-rooms {
+  width:40%;
+}
+.add-rooms img {
+  width:40px;
+  height:40px;
+}
+
+.logospan {
+  display:flex;
+  margin:20px 0 0 20px;
+}
+
+.add-room-question{
+  font-size: 45px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display:flex;
+  flex-direction: column;
+}
+.add-room-question p {
+  margin:0px;
+  align-self: center;
+}
+
+.add-room-form {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.suggestion{
+  font-size: 25px;
+  color:#9E9EA6;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 20px;
+
+}
+
+.suggestion p{
+  margin:0px;
+}
+
+
+.new-room-submit {
+  width:40%;
+  height:60px;
+  background-color: #DEDEE0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color:white;
+  border: 1px solid #DEDEE0;
+  border-radius: 5px;
+  margin-top:15px;
+  font-size: 40px;
 }
