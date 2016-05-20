@@ -1,45 +1,51 @@
-
-
 <div class="welcome-content">
   <div class="add-rooms">
     <span class="logospan">
       <span>
-<%=image_tag 'logo.png', class:'slacklogo' %>
-      <span class="logo-welcome">
-        slack
+        <%=image_tag 'logo.png', class:'slacklogo' %>
+        <span class="logo-welcome">
+          slack
+        </span>
       </span>
-    </span>
-    <div class="new-team-container">
-      Looking to join an existing team?
-      <%=link_to find_rooms_path do%><div class="room-index-link">
-        <center>Find a Team</center>
-      </div><%end%>
-    </div>
+      <div class="new-team-container">
+        Looking to join an existing team?
+        <%=link_to find_rooms_path do%>
+        <div class="room-index-link">
+          Find a Team
+        </div><%end%>
+      </div>
     </span>
     <div class="add-room-question">
-      <p> Hey <%=@current_user.first_name %>!
-      <p>What do you want to</p>
-      <p>call your Slack Team?</p>
-    </div>
-    <div class="suggestion">
-      <p><center>Name your team after the group </center> </p>
-      <p><center>that will be using Slack togethor.<center></p>
-    </div>
-    <% if @room.errors.any? %>
-          <%= pluralize(@room.errors.count, 'error') %> need your attention.
+      <p>
+        Hey
+        <%=@current_user.first_name %>!
+        <p>What do you want to</p>
+        <p>call your Slack Team?</p>
+      </div>
+      <div class="suggestion">
+        <p>
+          <center>Name your team after the group
+          </center>
+        </p>
+        <p>
+          <center>that will be using Slack togethor.<center></p>
+          </div>
+          <% if @room.errors.any? %>
+          <%= pluralize(@room.errors.count, 'error') %>
+          need your attention.
           <ul>
             <% @room.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
+            <li><%= msg %></li>
             <% end %>
           </ul>
-        <% end %>
-  <center style="padding-top:20px;">
-    <%= form_for @room do |f| %>
-    <%= f.text_field :room_name, class:"newroom", placeholder:'Ex. Thermo Study Group' %>
-    <%= f.submit 'Go', class:'new-room-submit' %>
-    <%end %>
+          <% end %>
+          <center style="padding-top:20px;">
+            <%= form_for @room do |f| %>
+            <%= f.text_field :room_name, class:"newroom", placeholder:'Ex. Thermo Study Group' %>
+            <%= f.submit 'Go', class:'new-room-submit' %>
+            <%end %>
 
-</center>
-  </div>
-  <%= image_tag 'art.png', class:'art'%>
-</div>
+          </center>
+        </div>
+        <%= image_tag 'art.png', class:'art'%>
+      </div>
