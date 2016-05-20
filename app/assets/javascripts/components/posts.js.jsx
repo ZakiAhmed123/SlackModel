@@ -45,6 +45,7 @@ var Posts = React.createClass({
     var namestyle = {
     fontFamily: 'Lato',
     fontSize: '17px',
+    overflow: 'hidden',
     }
 
     return <div style={divstyle}>
