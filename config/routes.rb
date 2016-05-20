@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', as: :user
 
   get 'rooms/index' => 'rooms#index', as: :rooms
+  get 'rooms/find' => 'rooms#find', as: :find_rooms
   get 'rooms/:id' => 'rooms#show', as: :room
   post 'rooms/index' => 'rooms#create'
 

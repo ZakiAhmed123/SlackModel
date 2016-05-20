@@ -55,7 +55,7 @@ var Posts = React.createClass({
           {post.user.last_name}</span>
         <span className='timestamp'>
           {post.timestamp}</span>
-         <p>{post.text}</p>
+         <p className='react-text'>{post.text}</p>
         </p>
       })}
 

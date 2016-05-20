@@ -8,6 +8,12 @@ class RoomsController < ApplicationController
      end
    end
 
+   def find
+     @rooms=Room.all
+     @room = Room.find_by id: params[:id]
+
+   end
+
    def index
      @rooms = Room.all
      @room = Room.new
@@ -37,4 +43,6 @@ class RoomsController < ApplicationController
 
    def delete
    end
+
+
 end

@@ -1,0 +1,15 @@
+  <span class='find-container'>
+<%=image_tag 'logo.png', class:'findlogoimg' %>
+  <span class="find-logo-welcome">
+    slack
+  </span>
+</span>
+<center><div class="find-welcome">
+<p style="font-size:70px;">Hey <%=@current_user.first_name%>!</p>
+<p style="font-size:50px;">These are all the existing teams you can join.</p>
+</div>
+<div class="room-list">
+<% @rooms.each do |f|%>
+<p class="room-item"><%= link_to f.room_name, room_path(id: f.id), class:'room-list-links'%></p>
+<%end%>
+</div></center>
