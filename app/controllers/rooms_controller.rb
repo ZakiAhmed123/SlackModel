@@ -21,7 +21,7 @@ class RoomsController < ApplicationController
 
    def show
      @room = Room.find_by id: params[:id]
-     @rooms = Room.all
+     @rooms = Room.all.order("created_at desc")
 
    end
 
