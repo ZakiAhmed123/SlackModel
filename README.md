@@ -8,7 +8,7 @@ The application has the ability to create an account, add rooms and chat with ot
 email: reach.zaki.ahmed@gmail.com
 Portfolio: www.zakiahmed.org
 
-![alt text](app/assets/images/S1.png )
+![alt text](http://i854.photobucket.com/albums/ab108/The_Big_Zukini/slack_home.gif )
 ![alt text](app/assets/images/S2.png )
 ![alt text](app/assets/images/S3.png )
-![alt text](app/assets/images/S4.png )
+![alt text](http://i854.photobucket.com/albums/ab108/The_Big_Zukini/slack_sample.gif )
