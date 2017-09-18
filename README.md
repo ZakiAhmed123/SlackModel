@@ -2,8 +2,7 @@
 My own version of a clone of the slack groupchat application.
 BUILT WITH
 Ruby on Rails, JQUERY, JSON, REACT, HTML, CSS
-#My name is Zaki Ahmed,
-& I am a ruby on rails engineer, 24 years old out of Houston TX looking to grow as a developer.
+The application has the ability to create an account, add rooms and chat with other users with a 3 second auto refresh for any new updates. The groupchat was built with REACT.js
 
 #CONTACT INFO
 email: reach.zaki.ahmed@gmail.com
